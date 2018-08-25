@@ -51,13 +51,17 @@ layout: post
 </details>
 <details>
   <summary><h2 class="as-text">Webring</h2></summary>
-  <ul class="list list-items">
-    <li>
-      <a class="banner-88x31" href="#">Placeholder</a>
-      <a class="banner-88x31" href="#">Placeholder</a>
-      <a class="banner-88x31" href="#">Placeholder</a>
-      <a class="banner-88x31" href="#">Placeholder</a>
-      <a class="banner-88x31" href="#">Placeholder</a>
-    </li>
+  <ul class="list">
+    {% for item in site.data.webring %}
+      <li class="as-text">
+        <a class="{% if item.img %}banner{% else %}text{% endif %}-88x31" href="{{ item.url }}">
+          {% if item.img %}
+            <img src="{{ item.img }}" alt="{{ item.text }}" width="88" height="31">
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </details>

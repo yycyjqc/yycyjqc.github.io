@@ -169,17 +169,10 @@ article img:not(.emoji) {
   margin-left: 2.5em;
   margin-top: 0.8em;
   padding-left: 0;
-  list-style: none;
 
   li {
     padding: 0;
     margin-bottom: 15px;
-
-    &:before {
-      content: '•';
-      position: absolute;
-      margin-left: -1.5em;
-    }
   }
 }
 
@@ -255,15 +248,24 @@ blink {
   100% { visibility: visible; }
 }
 
-.banner-88x31 {
+.banner-88x31,
+.text-88x31 {
+  display: inline-block;
+  width: 88px;
+  height: 31px;
+  background: #000;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.text-88x31 {
   font-size: 0.8em;
   padding: 1em;
   white-space: nowrap;
   line-height: 1;
-  display: inline-block;
-  width: 88px;
-  height: 31px;
+  text-decoration: none;
   overflow: auto;
-  background: #000;
   color: #fff;
 }
