@@ -1,6 +1,6 @@
 # A blog
 
-This is where Sean writes her stuff and messes around every once in a while.
+This is where Sean writes his stuff and messes around every once in a while.
 
 ## Development
 
